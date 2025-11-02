@@ -29,6 +29,15 @@ const routes = [
     }
   },
   {
+    path: '/text-generator',
+    name: 'TextGenerator',
+    component: () => import('@/views/TextGenerator.vue'),
+    meta: {
+      title: '文本生成测试用例',
+      hidden: true
+    }
+  },
+  {
     path: '/mindmaps',
     name: 'MindMaps',
     component: () => import('@/views/MindMaps.vue'),

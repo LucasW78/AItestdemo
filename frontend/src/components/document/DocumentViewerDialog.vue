@@ -43,7 +43,7 @@
           :loading="processing"
           @click="processDocument"
         >
-          <el-icon><Magic /></el-icon>
+          <el-icon><Tools /></el-icon>
           处理文档
         </el-button>
         <el-button
@@ -122,7 +122,7 @@ import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { documentService } from '@/services/documentService'
 import {
-  Magic,
+  Tools,
   List,
   Loading,
   DocumentCopy,

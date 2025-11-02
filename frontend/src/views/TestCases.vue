@@ -2,8 +2,8 @@
   <div class="testcases-container">
     <div class="page-header">
       <h1 class="page-title">测试用例</h1>
-      <el-button type="primary" @click="showGenerateDialog = true">
-        <el-icon><Magic /></el-icon>
+      <el-button type="primary" @click="$router.push('/text-generator')">
+        <el-icon><Tools /></el-icon>
         生成测试用例
       </el-button>
     </div>
@@ -143,12 +143,7 @@
       </div>
     </el-card>
 
-    <!-- Generate Test Cases Dialog -->
-    <TestCaseGenerateDialog
-      v-model="showGenerateDialog"
-      @success="handleGenerateSuccess"
-    />
-  </div>
+      </div>
 </template>
 
 <script setup>
@@ -157,9 +152,8 @@ import { useRoute, useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { testCaseService } from '@/services/testCaseService'
 import { mindMapService } from '@/services/mindMapService'
-import TestCaseGenerateDialog from '@/components/testcases/TestCaseGenerateDialog.vue'
 import {
-  Magic,
+  Tools,
   Search,
   List
 } from '@element-plus/icons-vue'
@@ -176,7 +170,6 @@ const pageSize = ref(20)
 const searchQuery = ref('')
 const statusFilter = ref('')
 const priorityFilter = ref('')
-const showGenerateDialog = ref(false)
 
 // Methods
 const loadTestCases = async () => {
@@ -249,9 +242,6 @@ const deleteTestCase = async (testCase) => {
   }
 }
 
-const handleGenerateSuccess = () => {
-  loadTestCases()
-}
 
 // Utility methods
 const getPriorityColor = (priority) => {

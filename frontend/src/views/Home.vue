@@ -43,7 +43,7 @@
         <el-col :span="8">
           <el-card class="feature-card" shadow="hover">
             <div class="feature-content">
-              <el-icon class="feature-icon" size="48"><Magic /></el-icon>
+              <el-icon class="feature-icon" size="48"><Tools /></el-icon>
               <h3 class="feature-title">AI生成</h3>
               <p class="feature-description">
                 基于Gemini AI模型，智能分析文档内容，自动生成高质量的测试用例
@@ -128,7 +128,7 @@ import {
   Upload,
   View,
   Document,
-  Magic,
+  Tools,
   Share,
   UploadFilled,
   List
